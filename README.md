@@ -37,27 +37,6 @@ http://localhost:3001/api/v1/getall/customer
 
 ```
 
-<p>Creats new customers </p>
-
-```Node
-http://localhost:3001/api/v1/createcustomers
-
-```
-
-<p>Finds customers by ID</p>
-
-```Node
-http://localhost:3001/api/v1/findcustomers/byid/613a41a66e1614b3b325fb2c
-
-```
-
-<p>Finds customers by Name</p>
-
-```Node
-http://localhost:3001/api/v1/findcustomers/byname/Ugonna
-
-```
-
 <details><summary class="section-title">The <em>GET Request to [http://localhost:3001/api/v1/getall/customer] returns all customers: </summary>
 <div class="collapsable-details">
 <pre>{
@@ -80,7 +59,14 @@ http://localhost:3001/api/v1/findcustomers/byname/Ugonna
 
 <p>&nbsp;</p>
 
-<details><summary class="section-title"><p><em> POST Request</em> to <em>http://localhost:3001/api/v1/createcustomers </em>, creates a new customer. </p></summary>
+<p>Creates new customers </p>
+
+```Node
+http://localhost:3001/api/v1/createcustomers
+
+```
+
+<details><summary class="section-title"><em> POST Request</em> to <em>http://localhost:3001/api/v1/createcustomers </em>, creates a new customer. </summary>
 <div class="collapsable-details">
 <pre>{
 &nbsp; "name": String --<em> Required </em> <em>Must be unique </em>
@@ -95,6 +81,13 @@ http://localhost:3001/api/v1/findcustomers/byname/Ugonna
 </details>
 
 <p>&nbsp;</p>
+
+<p>Finds customers by ID</p>
+
+```Node
+http://localhost:3001/api/v1/findcustomers/byid/613a41a66e1614b3b325fb2c
+
+```
 
 <details><summary class="section-title">
 <em> GET Request to [http://localhost:3001/api/v1/findcustomers/byid/61398131e59aea691e256622] </em>,  finds a customer by id </summary>
@@ -118,6 +111,13 @@ http://localhost:3001/api/v1/findcustomers/byname/Ugonna
 </details>
 
 <p>&nbsp;</p>
+
+<p>Finds customers by Name</p>
+
+```Node
+http://localhost:3001/api/v1/findcustomers/byname/Ugonna
+
+```
 
 <details><summary class="section-title">
 <em> GET Request to  [http://localhost:3001/api/v1/findcustomers/byname/Jude]</em>finds customer by name </summary>
@@ -152,20 +152,6 @@ http://localhost:3001/api/v1/findcustomers/byname/Ugonna
 
 ```Node
 http://localhost:3001/api/v1/getall/discount
-
-```
-
-<p>Gets specific discount type </p>
-
-```Node
-http://localhost:3001/api/v1/specificpercentage/For every $100 on the bill
-
-```
-
-<p>Creates a new discount type </p>
-
-```Node
-http://localhost:3001/api/v1/creatediscount
 
 ```
 
@@ -206,6 +192,13 @@ http://localhost:3001/api/v1/creatediscount
 
 <p>&nbsp;</p>
 
+<p>Gets specific discount type </p>
+
+```Node
+http://localhost:3001/api/v1/specificpercentage/For every $100 on the bill
+
+```
+
 <details><summary class="section-title"><em>GET Request to [http://localhost:3001/api/v1/specificpercentage/For every $100 on the bill] </em> returns a single discount type
 </summary>
 
@@ -228,6 +221,13 @@ http://localhost:3001/api/v1/creatediscount
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
+
+<p>Creates a new discount type </p>
+
+```Node
+http://localhost:3001/api/v1/creatediscount
+
+```
 
 <details><summary class="section-title">POST Request to [<em>http://localhost:3001/api/v1/creatediscount</em>] creates a new discount type
 </summary>
