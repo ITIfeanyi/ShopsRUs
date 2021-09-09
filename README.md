@@ -202,6 +202,10 @@ npm install
 
 <p>&nbsp;</p>
 
+## Invoice
+
+<p>The <em>REST</em> service implement the following functionalities for Invoice:</p>
+
 <details><summary class="section-title">
 <p><em>POST Request to [http://localhost:3001/api/v1/invoice] </em>, creates a new invoice and store the Id of the invoice on the customer </p>
 </summary>
@@ -259,6 +263,6 @@ npm install
 }
 </details>
 
-## License
+##License
 
 [MIT]
