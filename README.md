@@ -16,8 +16,10 @@ git clone https://github.com/ITIfeanyi/ShopsRUs.git
 
 ```Node
 npm install
+```
 
-#This install all neccessary dependencies
+```Node
+npm run dev
 ```
 
 <p> There will be seed data in the database with which you can use to make basic queries. </p>
@@ -27,6 +29,34 @@ npm install
 ## Customer
 
 <p>The <em>REST</em> service implement the following functionalities for Customers:</p>
+
+<p>Gets all existing customers </p>
+
+```Node
+http://localhost:3001/api/v1/getall/customer
+
+```
+
+<p>Creats new customers </p>
+
+```Node
+http://localhost:3001/api/v1/createcustomers
+
+```
+
+<p>Finds customers by ID</p>
+
+```Node
+http://localhost:3001/api/v1/findcustomers/byid/613a41a66e1614b3b325fb2c
+
+```
+
+<p>Finds customers by Name</p>
+
+```Node
+http://localhost:3001/api/v1/findcustomers/byname/Ugonna
+
+```
 
 <details><summary class="section-title">The <em>GET Request to [http://localhost:3001/api/v1/getall/customer] returns all customers: </summary>
 <div class="collapsable-details">
@@ -50,10 +80,7 @@ npm install
 
 <p>&nbsp;</p>
 
-<details>
-<summary class="section-title">
-<p><em> POST Request</em> to <em>http://localhost:3001/api/v1/createcustomers </em>, creates a new customer. </p>
- </summary>
+<details><summary class="section-title"><p><em> POST Request</em> to <em>http://localhost:3001/api/v1/createcustomers </em>, creates a new customer. </p></summary>
 <div class="collapsable-details">
 <pre>{
 &nbsp; "name": String --<em> Required </em> <em>Must be unique </em>
@@ -70,8 +97,7 @@ npm install
 <p>&nbsp;</p>
 
 <details><summary class="section-title">
-<p><em> GET Request to [http://localhost:3001/api/v1/findcustomers/byid/61398131e59aea691e256622] </em>,  finds a customer by id </p>
-</summary>
+<em> GET Request to [http://localhost:3001/api/v1/findcustomers/byid/61398131e59aea691e256622] </em>,  finds a customer by id </summary>
 
 <div class="collapsable-details">
 <pre>{
@@ -94,10 +120,9 @@ npm install
 <p>&nbsp;</p>
 
 <details><summary class="section-title">
-<p><em> GET Request to  [http://localhost:3001/api/v1/findcustomers/byname/Jude]</em>finds customer by name  </p>
-</summary>
+<em> GET Request to  [http://localhost:3001/api/v1/findcustomers/byname/Jude]</em>finds customer by name </summary>
 
-<p> It is important to note that <em> Name </em> is unique </p>
+<p> It is important to note that <em> Name </em> is unique for every customer</p>
 
 <div class="collapsable-details">
 <pre>{
@@ -123,8 +148,28 @@ npm install
 
 <p>The <em>REST</em> service implement the following functionalities for Discount:</p>
 
-<details><summary class="section-title">
-<p><em> GET Request to [http://localhost:3001/api/v1/getall/discount] </em>, returns all discount in the database </p>
+<p>Gets all existing discount in the database</p>
+
+```Node
+http://localhost:3001/api/v1/getall/discount
+
+```
+
+<p>Gets specific discount type </p>
+
+```Node
+http://localhost:3001/api/v1/specificpercentage/For every $100 on the bill
+
+```
+
+<p>Creates a new discount type </p>
+
+```Node
+http://localhost:3001/api/v1/creatediscount
+
+```
+
+<details><summary class="section-title"><em> GET Request to [http://localhost:3001/api/v1/getall/discount] </em>, returns all discount in the database 
 </summary>
 <div class="collapsable-details">
 <pre>{
@@ -161,8 +206,7 @@ npm install
 
 <p>&nbsp;</p>
 
-<details><summary class="section-title">
-<p><em>GET Request to [http://localhost:3001/api/v1/specificpercentage/For every $100 on the bill] </em> returns a single discount type</p>
+<details><summary class="section-title"><em>GET Request to [http://localhost:3001/api/v1/specificpercentage/For every $100 on the bill] </em> returns a single discount type
 </summary>
 
 <div class="collapsable-details">
@@ -185,8 +229,7 @@ npm install
 
 <p>&nbsp;</p>
 
-<details><summary class="section-title">
-<p>POST Request to [<em>http://localhost:3001/api/v1/creatediscount</em>] creates a new discount type</p>
+<details><summary class="section-title">POST Request to [<em>http://localhost:3001/api/v1/creatediscount</em>] creates a new discount type
 </summary>
 
 <div class="collapsable-details">
@@ -199,15 +242,21 @@ npm install
 
 <p> The POST request above returns a status of <code>200 </code> along with an Object of data when it is successful or <code>500 </code> when an error occurs</p>
 </details>
-
+ 
 <p>&nbsp;</p>
 
 ## Invoice
 
 <p>The <em>REST</em> service implement the following functionalities for Invoice:</p>
 
-<details><summary class="section-title">
-<p><em>POST Request to [http://localhost:3001/api/v1/invoice] </em>, creates a new invoice and store the Id of the invoice on the customer </p>
+<p>Creates a new Invoice</p>
+
+```Node
+http://localhost:3001/api/v1/invoice
+
+```
+
+<details><summary class="section-title"><em>POST Request to [http://localhost:3001/api/v1/invoice] </em>, creates a new invoice and store the Id of the invoice on the customer 
 </summary>
 <div class="collapsable-details">
 <pre>{
