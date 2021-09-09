@@ -1,0 +1,37 @@
+{
+  "name": "shopsrus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/api/v1/index.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITIfeanyi/ShopsRUs.git"
+  },
+  "author": "Ifeanyi Igweh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ITIfeanyi/ShopsRUs/issues"
+  },
+  "homepage": "https://github.com/ITIfeanyi/ShopsRUs#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.5"
+  },
+  "devDependencies": {
+    "jest": "^27.1.1",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  }
+}
