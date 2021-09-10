@@ -22,7 +22,9 @@ npm install
 npm run dev
 ```
 
-<p> There will be seed data in the database with which you can use to make basic queries. </p>
+<p> There will be seed data in the database with which you can make basic queries. </p>
+
+<p>The mongodb uri is exposed in the src/api/v1/config/dbConnection. To enable you get the seed data </p>
 
 <p>&nbsp; </p>
 
