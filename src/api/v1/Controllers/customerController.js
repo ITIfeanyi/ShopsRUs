@@ -49,9 +49,9 @@ module.exports = {
   findOneCustomerById: async (req, res) => {
     try {
       const id = req.params.id;
-      const customer = await Customer.findById(id);
+      const customer = await Customer.findById(id).populate("invoiceId");
       if (!customer) {
-        return handleError(res, _, 404, "No customer exist with such ID");
+        return handleError(res, "No customer exist with such ID", 404);
       }
 
       return res.status(200).json({ ok: true, customer });
@@ -63,7 +63,7 @@ module.exports = {
   findOneCustomerByName: async (req, res) => {
     try {
       const name = req.params.name;
-      const customer = await Customer.findOne({ name });
+      const customer = await Customer.findOne({ name }).populate("invoiceId");
       if (!customer) {
         return handleError(res, "No customer exist with such name", 404);
       }

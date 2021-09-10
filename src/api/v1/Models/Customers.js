@@ -19,7 +19,7 @@ const CustomerSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  invoiceId: [],
+  invoiceId: [{ type: mongoose.Schema.Types.ObjectId, ref: "Invoices" }],
   createdAt: { type: Date, default: Date.now },
 });
 

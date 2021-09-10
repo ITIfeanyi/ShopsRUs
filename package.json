@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/api/v1/index.js",
-    "test": "jest --detectOpenHandles"
+    "dev": "nodemon src/api/server.js",
+    "test": "jest"
   },
   "jest": {
     "testEnvironment": "node",
@@ -27,6 +27,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "moment": "^2.29.1",
+    "mongodb": "^4.1.1",
     "mongoose": "^6.0.5"
   },
   "devDependencies": {
